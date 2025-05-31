@@ -6,9 +6,48 @@
     <title>GAME TITLE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/lightbox.css">
     <link href="styles/custom.css" rel="stylesheet">
 </head>
 <body class="bg-gray-900 text-gray-100">
+     <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-white">GAME TITLE</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="devlog/index.html" class="nav-link">Devlog</a>
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                        <a href="team.html" class="nav-link">Team</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="devlog/post1.html" class="mobile-nav-link">Devlog</a>
+                <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+                <a href="team.html" class="mobile-nav-link">Team</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
     <!-- Hero Section -->
     <section class="hero-section min-h-[60vh] flex flex-col justify-center items-center text-center px-4 py-20">
         <h1 class="text-5xl md:text-7xl font-bold mb-4">GAME TITLE</h1>
@@ -31,73 +70,95 @@
                 <p class="text-gray-400">Short additional description or hook to keep readers engaged.</p>
             </div>
             <div class="grid grid-cols-2 gap-4">
-                <img src="images/screenshot1.jpg" alt="Game screenshot" class="game-screenshot">
-                <img src="images/screenshot2.jpg" alt="Game screenshot" class="game-screenshot">
-                <img src="images/screenshot3.jpg" alt="Game screenshot" class="game-screenshot">
-                <img src="images/screenshot4.jpg" alt="Game screenshot" class="game-screenshot">
+                <a href="images/screenshots/sample.jpg" data-lightbox="screenshots" data-title="Game Screenshot 1">
+                    <img src="images/screenshots/sample.jpg" alt="Game screenshot" class="game-screenshot">
+                </a>
+                <a href="images/screenshots/sample.jpg" data-lightbox="screenshots" data-title="Game Screenshot 2">
+                    <img src="images/screenshots/sample.jpg" alt="Game screenshot" class="game-screenshot">
+                </a>
+                <a href="images/screenshots/sample.jpg" data-lightbox="screenshots" data-title="Game Screenshot 3">
+                    <img src="images/screenshots/sample.jpg" alt="Game screenshot" class="game-screenshot">
+                </a>
+                <a href="images/screenshots/sample.jpg" data-lightbox="screenshots" data-title="Game Screenshot 4">
+                    <img src="images/screenshots/sample.jpg" alt="Game screenshot" class="game-screenshot">
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Devlog Section -->
+    <!-- Devlog Preview Section -->
     <section class="py-20 bg-gray-800 px-4">
         <div class="max-w-4xl mx-auto">
             <h2 class="section-title">DEVLOG</h2>
             <div class="space-y-8">
                 <div class="devlog-post">
-                    <h3>Post title about development progress</h3>
-                    <p class="post-date">Date ______</p>
-                    <p>Summary of what this devlog post would contain about your game's development.</p>
+                    <h3><a href="devlog/post1.html" class="hover:text-blue-400 transition">Post title about development progress</a></h3>
+                    <p class="post-date">June 1, 2023</p>
+                    <p>Summary of what this devlog post would contain about your game's development. <a href="devlog/post1.html" class="text-blue-400 hover:underline">Read more →</a></p>
                 </div>
                 <div class="devlog-post">
-                    <h3>Another post title about game features</h3>
-                    <p class="post-date">Date ______</p>
-                    <p>Summary of what this devlog post would contain about your game's development.</p>
+                    <h3><a href="devlog/post1.html" class="hover:text-blue-400 transition">Another post title about game features</a></h3>
+                    <p class="post-date">May 15, 2023</p>
+                    <p>Summary of what this devlog post would contain about your game's development. <a href="devlog/post2.html" class="text-blue-400 hover:underline">Read more →</a></p>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="devlog/index.html" class="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white font-medium transition">View All Devlog Posts</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Team Preview Section -->
     <section class="py-20 px-4 max-w-6xl mx-auto">
-        <h2 class="section-title">ABOUT THE TEAM</h2>
+        <h2 class="section-title">MEET THE TEAM</h2>
         <div class="grid md:grid-cols-2 gap-8">
             <div class="team-member">
-                <div class="member-photo"></div>
-                <h3>Name</h3>
-                <p class="role">Role</p>
-                <p>Short bio about this team member and their contributions.</p>
+                <div class="member-photo" style="background-image: url('images/team/sample.png');"></div>
+                <h3>John Doe</h3>
+                <p class="role">Lead Developer</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank" class="social-icon">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    </a>
+                    <a href="mailto:john@example.com" class="social-icon">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </a>
+                </div>
             </div>
             <div class="team-member">
-                <div class="member-photo"></div>
-                <h3>Name</h3>
-                <p class="role">Role</p>
-                <p>Short bio about this team member and their contributions.</p>
+                <div class="member-photo" style="background-image: url('images/team/sample.png');"></div>
+                <h3>Jane Smith</h3>
+                <p class="role">Art Director</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank" class="social-icon">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    </a>
+                    <a href="mailto:jane@example.com" class="social-icon">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </a>
+                </div>
             </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="team.html" class="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white font-medium transition">Meet the Full Team</a>
         </div>
     </section>
 
-    <!-- Roadmap Section -->
-    <section class="py-20 bg-gray-800 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="section-title">ROADMAP</h2>
-            <div class="roadmap-container">
-                <div class="roadmap-item">Develop</div>
-                <div class="roadmap-item">Beta</div>
-                <div class="roadmap-item">Launch</div>
-            </div>
-        </div>
-    </section>
-
-        <!-- Contact Section -->
-    <section class="py-20 px-4 bg-gray-800">
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gray-800">
         <div class="max-w-4xl mx-auto">
             <h2 class="section-title">CONTACT</h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
                     <div class="space-y-4">
-                        <div class="flex items-start">
+                        <div class="flex items-start contact-info-item">
                             <svg class="h-6 w-6 text-blue-400 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
@@ -106,7 +167,7 @@
                                 <p>moheb.yarahmadi@gmail.com</p>
                             </div>
                         </div>
-                        <div class="flex items-start">
+                        <div class="flex items-start contact-info-item">
                             <svg class="h-6 w-6 text-blue-400 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
@@ -115,20 +176,20 @@
                                 <p>+1 (518) 595-3542</p>
                             </div>
                         </div>
-                        <div class="flex items-start">
+                        <div class="flex items-start contact-info-item">
                             <svg class="h-6 w-6 text-blue-400 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
                             <div>
                                 <p class="text-gray-400">Location</p>
-                                <p>Earth</p>
+                                <p>City, Country</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Send a Message</h3>
+                    <h3 class="text-xl font-bold mb-4">Contribute? Let me know</h3>
                     <form id="contactForm" class="space-y-4">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
@@ -149,34 +210,74 @@
         </div>
     </section>
 
-    <!-- Footer -->
+ <!-- Footer -->
     <footer class="site-footer">
         <p>© <span id="current-year"></span> GAME TITLE. All rights reserved.</p>
     </footer>
 
+    <script src="js/lightbox.js"></script>
     <script>
-        // Update copyright year automatically
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Load shared components
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load navbar
+            fetch('includes/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar').innerHTML = html;
+                    // Activate current page link
+                    const links = document.querySelectorAll('.nav-link, .mobile-nav-link');
+                    links.forEach(link => {
+                        if (link.getAttribute('href') === 'index.html') {
+                            link.classList.add('active');
+                        }
+                    });
+                    // Mobile menu toggle
+                    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+                    const mobileMenu = document.querySelector('.mobile-menu');
+                    if (mobileMenuButton && mobileMenu) {
+                        mobileMenuButton.addEventListener('click', function() {
+                            mobileMenu.classList.toggle('hidden');
+                        });
+                    }
+                });
+            
+            // Load footer
+            fetch('includes/footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('footer').innerHTML = html;
+                    // Update copyright year
+                    document.getElementById('current-year').textContent = new Date().getFullYear();
+                });
 
-        // Simple form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+            // Initialize lightbox
+            if (typeof lightbox !== 'undefined') {
+                lightbox.option({
+                    'resizeDuration': 200,
+                    'wrapAround': true,
+                    'positionFromTop': 100
+                });
+            }
 
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            // Create mailto link
-            const subject = `Message from ${name} about GAME TITLE`;
-            const body = `${message}\n\nFrom: ${name}\nEmail: ${email}`;
-            const mailtoLink = `mailto:moheb.yarahmadi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            // Open email client
-            window.location.href = mailtoLink;
-
-            // Optional: Show success message
-            alert('Your email client will open with this message. Please send it to contact us!');
+            // Simple form handling
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    const subject = `Message from ${name} about GAME TITLE`;
+                    const body = `${message}\n\nFrom: ${name}\nEmail: ${email}`;
+                    const mailtoLink = `mailto:moheb.yarahmadi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    
+                    window.location.href = mailtoLink;
+                    
+                    alert('Your email client will open with this message. Please send it to contact us!');
+                });
+            }
         });
     </script>
 </body>

@@ -185,3 +185,92 @@ body {
     margin-top: 1rem;
     text-align: center;
 }
+
+/* Navigation Styles */
+.nav-link {
+    @apply px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition;
+}
+
+.nav-link.active {
+    @apply text-white bg-gray-800;
+}
+
+.mobile-nav-link {
+    @apply block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition;
+}
+
+/* Gallery Styles */
+.gallery-image {
+    @apply rounded-lg shadow-xl transition transform hover:scale-105 cursor-zoom-in;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+/* Lightbox Overrides */
+.lb-outerContainer {
+    background: transparent !important;
+}
+
+.lb-dataContainer {
+    @apply bg-gray-900 bg-opacity-90 !important;
+}
+
+/* Team Social Links */
+.social-links {
+    @apply flex justify-center space-x-4;
+}
+
+.social-icon {
+    @apply text-gray-400 hover:text-blue-400 transition;
+    width: 24px;
+    height: 24px;
+}
+
+/* Devlog Post Styles */
+.prose {
+    @apply text-gray-300;
+}
+
+.prose h2 {
+    @apply text-2xl font-bold mt-8 mb-4 text-white;
+}
+
+.prose p {
+    @apply mb-4;
+}
+
+.prose ul {
+    @apply list-disc pl-6 mb-4;
+}
+
+.prose .lead {
+    @apply text-xl text-gray-300 mb-6;
+}
+
+/* Devlog Card Styles */
+.devlog-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.devlog-card:hover {
+    transform: translateY(-5px);
+}
+
+.devlog-card img {
+    transition: transform 0.5s ease;
+}
+
+.devlog-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Active Navigation Link */
+.nav-link.active,
+.mobile-nav-link.active {
+    @apply text-white bg-gray-800;
+}
+
+/* Tag Styles */
+.tag {
+    @apply text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded;
+}
