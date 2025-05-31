@@ -154,3 +154,34 @@ body {
         flex-direction: column;
     }
 }
+
+/* Contact Section Styles */
+.contact-info-item {
+    transition: all 0.3s ease;
+}
+
+.contact-info-item:hover {
+    transform: translateX(5px);
+}
+
+/* Form Styles */
+#contactForm input,
+#contactForm textarea {
+    transition: all 0.3s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Success Message */
+.form-success {
+    display: none;
+    background: #10b981;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
