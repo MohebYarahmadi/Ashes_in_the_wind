@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME TITLE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="styles/custom.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Hero Section -->
+    <section class="hero-section min-h-[60vh] flex flex-col justify-center items-center text-center px-4 py-20">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4">GAME TITLE</h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">Tagline that captures the essence of your game</p>
+        <button class="cta-button">
+            WATCH TRAILER
+        </button>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="section-title">ABOUT</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="text-lg mb-6">Description of your game that gets players excited. Explain what makes it unique and why people should play it.</p>
+                <ul class="feature-list mb-6">
+                    <li>Key feature of your game</li>
+                    <li>Another key feature that stands out</li>
+                </ul>
+                <p class="text-gray-400">Short additional description or hook to keep readers engaged.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="images/screenshot1.jpg" alt="Game screenshot" class="game-screenshot">
+                <img src="images/screenshot2.jpg" alt="Game screenshot" class="game-screenshot">
+                <img src="images/screenshot3.jpg" alt="Game screenshot" class="game-screenshot">
+                <img src="images/screenshot4.jpg" alt="Game screenshot" class="game-screenshot">
+            </div>
+        </div>
+    </section>
+
+    <!-- Devlog Section -->
+    <section class="py-20 bg-gray-800 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="section-title">DEVLOG</h2>
+            <div class="space-y-8">
+                <div class="devlog-post">
+                    <h3>Post title about development progress</h3>
+                    <p class="post-date">Date ______</p>
+                    <p>Summary of what this devlog post would contain about your game's development.</p>
+                </div>
+                <div class="devlog-post">
+                    <h3>Another post title about game features</h3>
+                    <p class="post-date">Date ______</p>
+                    <p>Summary of what this devlog post would contain about your game's development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="section-title">ABOUT THE TEAM</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="team-member">
+                <div class="member-photo"></div>
+                <h3>Name</h3>
+                <p class="role">Role</p>
+                <p>Short bio about this team member and their contributions.</p>
+            </div>
+            <div class="team-member">
+                <div class="member-photo"></div>
+                <h3>Name</h3>
+                <p class="role">Role</p>
+                <p>Short bio about this team member and their contributions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="py-20 bg-gray-800 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="section-title">ROADMAP</h2>
+            <div class="roadmap-container">
+                <div class="roadmap-item">Develop</div>
+                <div class="roadmap-item">Beta</div>
+                <div class="roadmap-item">Launch</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>© <span id="current-year"></span> GAME TITLE. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Update copyright year automatically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
