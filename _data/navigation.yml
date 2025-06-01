@@ -1,0 +1,14 @@
+- name: Home
+  link: /
+  
+- name: Devlog
+  link: /devlog/
+  
+- name: Gallery
+  link: /gallery/
+  
+- name: Team
+  link: /team/
+  
+- name: Contact
+  link: /#contact
